@@ -1,0 +1,16 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DI\Definition;
+
+use DI\Factory\RequestedEntry;
+use Stringable;
+
+interface Definition extends RequestedEntry, Stringable
+{
+    /**
+     * @phpstan-param callable(mixed): mixed $replacer
+     */
+    public function replaceNestedDefinitions(callable $replacer) : void;
+}

@@ -1,0 +1,10 @@
+parameters:
+  level: 0
+  tipsOfTheDay: false
+  tmpDir: .phpstan.cache
+  paths:
+    - ./src
+  stubFiles:
+    - ./stubs/Definition.stub
+    - ./stubs/InvocationStrategyInterface.stub
+    - ./stubs/ServerRequestInterface.stub

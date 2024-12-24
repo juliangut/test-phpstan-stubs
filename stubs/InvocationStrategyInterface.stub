@@ -1,0 +1,22 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Slim\Interfaces;
+
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+
+interface InvocationStrategyInterface
+{
+    /**
+     * @phpstan-param callable(ServerRequestInterface): mixed $callable
+     * @phpstan-param array<string, mixed>                    $routeArguments
+     */
+    public function __invoke(
+        callable $callable,
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $routeArguments
+    ): ResponseInterface;
+}
